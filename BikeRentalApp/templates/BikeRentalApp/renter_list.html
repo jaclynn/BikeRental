@@ -1,0 +1,21 @@
+  
+{% extends './base.html' %}
+{% block content %}
+<h2>Renters</h2>
+<table id="renters">
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+      <th>Phone</th>
+    <th>VIP</th>
+  </tr>
+  {% for renter in renter_list %}
+  <tr>
+  <tr>
+      <td>{{ renter.first_name }}</td>
+      <td>{{ renter.last_name }}</td>
+      <td>{% if renter.vip_num > 0 %}{{ renter.vip_num }}{% else %}Not Enrolled{% endif %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

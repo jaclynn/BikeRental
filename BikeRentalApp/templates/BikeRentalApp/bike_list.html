@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Available Bikes</h2>
+<table id="bikes">
+  <tr>
+      <th>Lot #</th>
+      <th>Color</th>
+      <th>Type</th>
+  </tr>
+  {% for bike in bike_list %}
+  <tr>
+  <tr>
+      <td>{{ bike.lot_num }}</td>
+      <td>{{ bike.bike_color}}</td>
+      <td>{{ bike.bike_type }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

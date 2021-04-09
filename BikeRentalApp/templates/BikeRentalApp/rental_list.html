@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Rentals</h2>
+<table id="bikes">
+  <tr>
+      <th>Bike</th>
+      <th>Renter</th>
+      <th>Date</th>
+      <th>AM/PM</th>
+      <th>Price</th>
+  </tr>
+  {% for rental in rental_list %}
+  <tr>
+  <tr>
+      <td>{{ rental.bike }}</td>
+      <td>{{ rental.renter }}</td>
+      <td>{{ rental.date }}</td>
+      <td>{{ rental.ampm }}</td>
+      <td>{{ rental.price }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
